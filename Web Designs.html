@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pearly's Web Designs</title>
+<link rel="stylesheet" href="WebDes.css">
+</head>
+<body>
+    <div class="bg"></div>  
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Pearly Dashboard.html">About Me</a>
+        <a href="Pearly Portfolio.html" id="home">My Projects</a>
+        <a href="Pearly's Services.html">My Services</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>  
+        <main class="content">
+            <div class="project-container">
+            	<div class="project-image">
+            		<img src="images/webdes.png" alt="projectsss">
+            	</div>
+            </div>
+            <br>
+            <div class="back-button">
+                <button onclick="window.location.href='Pearly Portfolio.html';">
+                    <img src="images/back button.png">
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+ function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").style.width = "calc(100% - 250px)";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("main").style.width = "100%";
+}
+
+  document.getElementById('home').classList.add('active');
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 100) {
+        document.body.classList.add("scrolled");
+    } else {
+        document.body.classList.remove("scrolled");
+    }
+ });
+</script>
+</html>
