@@ -10,7 +10,7 @@
     
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">About Me</a>
+        <a href="Pearly Dashboard.html">About Me</a>
         <a href="Pearly Portfolio.html" id="home">My Projects</a>
         <a href="Pearly's Services.html">My Services</a>
         <a href="images/Fernette Pearl Franco_Resume.pdf" download>My Resume</a>
@@ -30,6 +30,62 @@
                     <img src="images/back button.png">
                 </button>
             </div>
+            <br>
+            <br>
+
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 6</div>
+                <img src="images/El-Express Home Page.png">
+                <div class="text">Home Page</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 6</div>
+                <img src="images/El-Express QR Scanner.png">
+                <div class="text">QR Scanner</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 6</div>
+                <img src="images/El-Express Admin Login.png">
+                <div class="text">Admin Login</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="images/El-Express Admin Dashboard 1.png">
+                <div class="text">Admin Dashboard</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="images/El-Express Voting Status.png">
+                <div class="text">Voting Status</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="images/El-Express Candidates Page 1.png">
+                <div class="text">Candidates Page 1</div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+
         </main>
     </div>
 </body>
@@ -55,5 +111,35 @@ function closeNav() {
         document.body.classList.remove("scrolled");
     }
  });
+
+let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+  slideIndex += n - 1;
+  showSlides();
+}
+
+function currentSlide(n) {
+  slideIndex = n - 1;
+  showSlides();
+}
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); 
+}
 </script>
 </html>
