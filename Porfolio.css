@@ -149,3 +149,8 @@ body::before {
     text-decoration: none;
     color: inherit;
 }
+
+.sidebar a.active {
+    background-color: #10304D;
+    color: #FCC8B2;
+}
