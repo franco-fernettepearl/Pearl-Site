@@ -345,6 +345,24 @@ body::before {
     color: inherit;
 }
 
+.github-info {
+    display: flex;
+    align-items: center;
+    margin-right: 220px;
+    margin-left: auto;
+}
+
+.github-info span{
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.github-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .tech-stack-container {
     background-color: #9BC0C1; 
     padding: 20px; 
