@@ -345,3 +345,23 @@ body::before {
     color: inherit;
 }
 
+.tech-stack-container {
+    background-color: #9BC0C1; 
+    padding: 20px; 
+    border-radius: 0px; 
+    margin-top: 20px; 
+    max-width: 550px; 
+    margin-left: 720px;
+    margin-right: 20px;
+    transition: margin-left 0.5s, width 0.5s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tech-stack-container img {
+    margin-top: 15px;
+    color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 350px;
+}
